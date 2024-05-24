@@ -4,7 +4,7 @@
 
 replicaCount: 1
 image:
-  repository: nginx
+  repository: trandiepphuongdev/app-devops
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "257a575"
@@ -33,7 +33,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8080
 ingress:
   enabled: false
   className: ""
