@@ -4,7 +4,7 @@
 
 replicaCount: 1
 image:
-  repository: nginx
+  repository: app-devops
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "0ffcf1e"
@@ -32,7 +32,7 @@ securityContext: {}
 # runAsUser: 1000
 
 service:
-  type: ClusterIP
+  type: NodePort
   port: 80
 ingress:
   enabled: false
